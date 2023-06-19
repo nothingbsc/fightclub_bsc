@@ -5,7 +5,7 @@ import './App.css';
 import React from 'react';
 
 
-const contractAddress = "0xBA9D37244b7e7D64d09495088b9B296e91da1Fe5";
+const contractAddress = "0x50CF23A548D4e167C1E08ad96c404F07A70819a7";
 const abi = contract.abi;
 
 function Faucet() {
@@ -65,7 +65,7 @@ function Faucet() {
           console.log("Claiming tokens");
           await contract.wait();
   
-          console.log(`Tokens claimed : https://mumbai.polygonscan.com/tx/${claim.hash}`);
+          console.log(`Tokens claimed : https://bscscan.com/tx/${claim.hash}`);
   
         }
         else { console.log("Ethereum object doesn't exist!");
