@@ -1,36 +1,27 @@
 { "abi": [
+	[
         {
+            "anonymous": false,
             "inputs": [
                 {
+                    "indexed": false,
                     "internalType": "address",
-                    "name": "_smtAddress",
-                    "type": "address"
-                },
-                {
-                    "internalType": "address",
-                    "name": "_ownerAddress",
+                    "name": "owner",
                     "type": "address"
                 }
             ],
-            "stateMutability": "nonpayable",
-            "type": "constructor"
-        },
-        {
-            "inputs": [],
-            "name": "send",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
+            "name": "OwnershipTransferred",
+            "type": "event"
         },
         {
             "inputs": [
                 {
-                    "internalType": "uint256",
-                    "name": "_amount",
-                    "type": "uint256"
+                    "internalType": "address",
+                    "name": "adr",
+                    "type": "address"
                 }
             ],
-            "name": "setFaucetDripAmount",
+            "name": "authorize",
             "outputs": [],
             "stateMutability": "nonpayable",
             "type": "function"
@@ -39,11 +30,49 @@
             "inputs": [
                 {
                     "internalType": "address",
-                    "name": "_tokenAddr",
+                    "name": "adr",
                     "type": "address"
                 }
             ],
-            "name": "setTokenAddress",
+            "name": "isAuthorized",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "account",
+                    "type": "address"
+                }
+            ],
+            "name": "isOwner",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address payable",
+                    "name": "adr",
+                    "type": "address"
+                }
+            ],
+            "name": "transferOwnership",
             "outputs": [],
             "stateMutability": "nonpayable",
             "type": "function"
@@ -52,19 +81,15 @@
             "inputs": [
                 {
                     "internalType": "address",
-                    "name": "_receiver",
+                    "name": "adr",
                     "type": "address"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "_amount",
-                    "type": "uint256"
                 }
             ],
-            "name": "withdrawTokens",
+            "name": "unauthorize",
             "outputs": [],
             "stateMutability": "nonpayable",
             "type": "function"
         }
+    ]
     ]
 }
